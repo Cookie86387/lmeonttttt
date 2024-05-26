@@ -1,0 +1,473 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f2f2f2;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    padding-top: 5px;
+}
+
+h1 {
+    size: 30px; /* Eliminamos el margen para evitar espacios innecesarios */
+}
+
+.fa-shopping-cart {
+    font-size: 24px;
+    color: #333;
+    margin-right: 20px;
+  }
+  
+  .carrito-texto {
+    top: 40px;
+    right: 17px;
+    position: absolute;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  .icono-carrito {
+    color: white;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    z-index: 3;
+  }
+  
+  #carrito-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    color: white;
+  }
+  
+  .producto-carrito {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+header h1 a {
+    position:  relative;
+    color: white;
+    display: block;
+    bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    padding-top: 2px;
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin: 0px;
+    padding: 10px;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav ul li .submenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    top: -10px;
+}
+
+/* Estilos del menú de navegación */
+nav ul li a:hover {
+    color: #ff7f50;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 20px;
+    left: 0px;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    visibility: visible;
+    transform: scaleX(1.1);
+}
+
+.submenu {
+    display: grid;
+    position: absolute;
+    background-color: #7a7a7a;
+    width: 100vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    grid-template-columns: repeat(4, 1fr);
+    z-index: 1;
+    padding: 10px;
+    opacity: 0;
+}
+
+/* Mostrar el submenu al pasar el mouse sobre la marca */
+.marca {
+    position: relative;
+}
+
+.marca:hover .submenu {
+    opacity: 1;
+    transform: translateY(0);
+    top: 76%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.submenu a {
+    color: #333;
+}
+
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s;
+}
+
+.submenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.submenu ul li {
+    margin: 1px 0;
+}
+
+/* Estilos del producto */
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+}
+
+.images img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0;
+}
+
+.product-details {
+    margin-left: 20px;
+    max-width: 400px;
+}
+
+.product-details hr {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+h1 {
+    font-size: 28px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.price-stock {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+}
+
+.availability {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.available .circle {
+    background-color: green;
+}
+
+.not-available .circle {
+    background-color: red;
+}
+
+.stock-status {
+    margin: 0;
+}
+
+.available .stock-status {
+    color: green;
+}
+
+.not-available .stock-status {
+    color: red;
+}
+
+.sizes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.size {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.size:hover,
+.size.selected {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.size.selected {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.description {
+    margin-top: 20px;
+    color: #555;
+}
+
+.specifications {
+    margin-top: 20px;
+}
+
+.specification {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.spec-label {
+    font-weight: bold;
+}
+
+.spec-detail {
+    margin-left: 10px;
+}
+
+.buy-button {
+    background-color:  rgb(86, 255, 78);
+    color: white;
+    border: none;
+    margin-top: 10px;
+    padding: 10px 168px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.buy-button:hover {
+    background-color: rgb(13, 255, 1);
+}
+
+.add-to-cart-button {
+    background-color: rgb(255, 75, 75);
+    color: white;
+    border: none;
+    margin-top: 10px;
+    padding: 10px 138.2px;
+    font-size: 16px;
+    white-space: nowrap;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px; 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+    background-color: rgb(255, 24, 63);
+}
+
+
+/* Estilos para el icono del carrito en la página principal */
+.icono-carrito {
+    color: white;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    z-index: 3; /* Asegura que esté encima de otros elementos */
+}
+
+/* Estilos para la página del carrito */
+#carrito-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    color: white;
+}
+
+.producto-carrito {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#total-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+#total-precio {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Estilo para el ícono del carrito */
+.fa-shopping-cart {
+    font-size: 24px; /* Tamaño del ícono */
+    color: #333; /* Color del ícono */
+    margin-right: 20px; /* Espacio a la derecha del ícono */
+}
+
+.carrito-texto {
+    top: 40px;
+    right: 17px;
+    position: absolute;
+    display: block;
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 5px; /* Espacio entre el icono y el texto */
+    text-align: center; /* Alinear el texto al centro */
+}

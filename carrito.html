@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Tienda de Ropa</a></h1>
+        <nav>
+            <ul>
+                <!-- Marca: Vans -->
+                <li class="marca">
+                    <a href="Vans.html" class="dropbtn">Vans</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">Authentic</a></li>
+                            <li><a href="VansOldSkool.html">Old Skool</a></li>
+                            <li><a href="#">Sk8-Hi</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Marca: Nike -->
+                <li class="marca">
+                    <a href="Nike.html" class="dropbtn">Nike</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">Air Force 1</a></li>
+                            <li><a href="#">Air Max 90</a></li>
+                            <li><a href="#">Blazer Low</a></li>
+                            <li><a href="#">Dunk Low</a></li>
+                            <li><a href="#">Air Jordan 1</a></li>
+                            <li><a href="#">React Element 55</a></li>
+                            <li><a href="#">Cortez</a></li>
+                            <li><a href="#">Roshe One</a></li>
+                            <li><a href="#">Air Max 97</a></li>
+                            <li><a href="#">VaporMax</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Marca: Adidas -->
+                <li class="marca">
+                    <a href="Adidas.html" class="dropbtn">Adidas</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">Superstar</a></li>
+                            <li><a href="#">Stan Smith</a></li>
+                            <li><a href="#">NMD_R1</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Marca: Converse -->
+                <li class="marca">
+                    <a href="Converse.html" class="dropbtn">Converse</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">Chuck Taylor All Star High Top</a></li>
+                            <li><a href="#">Chuck Taylor All Star Low Top</a></li>
+                            <li><a href="#">One Star</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Marca: Puma -->
+                <li class="marca">
+                    <a href="Puma.html" class="dropbtn">Puma</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">Suede Classic</a></li>
+                            <li><a href="#">RS-X</a></li>
+                            <li><a href="#">Clyde</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Marca: Reebok -->
+                <li class="marca">
+                    <a href="Reebok.html" class="dropbtn">Reebok</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">Classic Leather</a></li>
+                            <li><a href="#">Club C 85</a></li>
+                            <li><a href="#">Workout Plus</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- Marca: New Balance -->
+                <li class="marca">
+                    <a href="NewBalance.html" class="dropbtn">New Balance</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">574</a></li>
+                            <li><a href="#">997</a></li>
+                            <li><a href="#">530</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cart-items" id="cartItems">
+            <!-- Aquí se mostrarán los elementos del carrito -->
+        </div>
+        <div class="cart-total">
+            <h2>Total del Carrito</h2>
+            <p>Total: $<span id="totalAmount">0.00</span></p>
+        </div>
+
+        <div class="payment-info" id="paymentInfo" style="display: none;">
+            <h2>Información de Pago</h2>
+            <p id="productDetails"></p>
+            <p>Total a pagar: $<span id="totalToPay"></span></p>
+            <p>Por favor, transfiera el monto a la siguiente cuenta bancaria y envíe una captura de pantalla de la transferencia.</p>
+            <p>Cuenta Bancaria: 123-456-789<br>Banco: Banco Ejemplo<br>Titular: Nombre del Titular</p>
+            <button id="whatsappButton">Ir a WhatsApp</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Sobre Nosotros</h3>
+                <p>Somos una tienda de ropa que ofrece una amplia variedad de productos de marcas reconocidas.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p>Dirección: Calle Principal, Ciudad, País</p>
+                <p>Teléfono: +123456789</p>
+                <p>Email: info@tiendaderopa.com</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // JavaScript code
+        function getParams() {
+            var params = {};
+            var queryString = window.location.search.substring(1);
+            var pairs = queryString.split('&');
+            for (var i = 0; pairs[i]; i++) {
+                var pair = pairs[i].split('=');
+                params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+            }
+            return params;
+        }
+    
+        var params = getParams();
+        var productoJSON = params['producto'];
+        var total = 0;
+        var producto;
+        var quantity = 1; // Default quantity
+    
+        if (productoJSON) {
+            producto = JSON.parse(decodeURIComponent(productoJSON));
+    
+            var listaProductos = document.getElementById('cartItems');
+            var itemProducto = document.createElement('div');
+            itemProducto.className = 'cart-item';
+            var imagenProducto = document.createElement('img');
+            imagenProducto.src = producto.imagen;
+            imagenProducto.alt = producto.nombre;
+            imagenProducto.className = 'product-image';
+            itemProducto.appendChild(imagenProducto);
+    
+            var productDetails = document.createElement('div');
+            productDetails.className = 'product-details';
+            productDetails.textContent = producto.nombre + '  $' + producto.precio + " " + "T" + producto.talle;
+            itemProducto.appendChild(productDetails);
+    
+            var quantityWrapper = document.createElement('div');
+            quantityWrapper.className = 'quantity-wrapper';
+    
+            var decreaseButton = document.createElement('button');
+            decreaseButton.textContent = '-';
+            decreaseButton.className = 'quantity-button';
+            decreaseButton.id = 'decreaseQuantity';
+            decreaseButton.addEventListener('click', function() {
+                if (quantity > 1) {
+                    quantity--;
+                    quantityDisplay.value = quantity;
+                    updateTotal();
+                }
+            });
+            quantityWrapper.appendChild(decreaseButton);
+    
+            var quantityDisplay = document.createElement('input');
+            quantityDisplay.type = 'number';
+            quantityDisplay.value = quantity;
+            quantityDisplay.min = 1;
+            quantityDisplay.className = 'quantity-input';
+            quantityWrapper.appendChild(quantityDisplay);
+    
+            var increaseButton = document.createElement('button');
+            increaseButton.textContent = '+';
+            increaseButton.className = 'quantity-button';
+            increaseButton.id = 'increaseQuantity';
+            increaseButton.addEventListener('click', function() {
+                quantity++;
+                quantityDisplay.value = quantity;
+                updateTotal();
+            });
+            quantityWrapper.appendChild(increaseButton);
+    
+            productDetails.appendChild(quantityWrapper);
+    
+            listaProductos.appendChild(itemProducto);
+    
+            var totalAmount = document.getElementById('totalAmount');
+            total = parseFloat(totalAmount.textContent) + producto.precio;
+            totalAmount.textContent = total.toFixed(2);
+    
+            var paymentInfo = document.getElementById('paymentInfo');
+            var productDetailsText = document.getElementById('productDetails');
+            var totalToPay = document.getElementById('totalToPay');
+            totalToPay.textContent = total.toFixed(2);
+            paymentInfo.style.display = 'block';
+        }
+    
+        function updateTotal() {
+            var unitPrice = parseFloat(producto.precio);
+            var totalAmount = unitPrice * quantity;
+            var totalAmountDisplay = document.getElementById('totalAmount');
+            totalAmountDisplay.textContent = totalAmount.toFixed(2);
+            var totalToPay = document.getElementById('totalToPay');
+            totalToPay.textContent = totalAmount.toFixed(2);
+        }
+    
+        document.getElementById('whatsappButton').addEventListener('click', function() {
+            var whatsappNumber = '3425594220';
+            var mensaje = `Hola, estoy interesado en comprar el siguiente producto:\n\n`;
+            mensaje += `${producto.nombre} - $${producto.precio}\n`;
+            mensaje += `Talle: ${producto.talle}\n`;
+            mensaje += `Cantidad: ${quantity}\n\n`; // Include quantity in the message
+            mensaje += `Total a pagar: $${(parseFloat(producto.precio) * quantity).toFixed(2)}\n\n`; // Calculate total price
+            mensaje += `Por favor, transfiera el monto a la siguiente cuenta bancaria y envíe una captura de pantalla de la transferencia.\n\n`;
+            mensaje += `Cuenta Bancaria: 123-456-789\nBanco: Banco Ejemplo\nTitular: Nombre del Titular\n`;
+    
+            var whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(mensaje)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+    </body>
+</html>

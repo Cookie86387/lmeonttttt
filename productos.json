@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "Superstar",
+        "talle": "L",
+        "color": "rojo",
+        "marca": "Adidas",
+        "imagen": "remera.png"
+    },
+    {
+        "nombre": "Camiseta Azul",
+        "talle": "L",
+        "color": "azul",
+        "marca": "Adidas",
+        "imagen": "remera.png"
+    },
+    {
+        "nombre": "Camiseta Verde",
+        "talle": "S",
+        "color": "verde",
+        "marca": "Vans",
+        "imagen": "remera.png"
+    },
+    {
+        "nombre": "samba",
+        "talle": "S",
+        "color": "verde",
+        "marca": "Nike",
+        "imagen": "remera.png"
+    }
+]

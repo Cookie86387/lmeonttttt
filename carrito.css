@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items {
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.product-details {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Estilos para el campo de entrada de cantidad */
+.quantity-input {
+  width: 50px; /* Ancho del campo de entrada */
+  padding: 5px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 5px; /* Borde redondeado */
+  text-align: center; /* Alineación del texto */
+  margin: 0 10px; /* Margen izquierdo y derecho */
+}
+
+/* Estilos para los botones de más y menos */
+.quantity-button {
+  background-color: #f0f0f0; /* Color de fondo */
+  color: #333; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 5px; /* Espaciado interno */
+  cursor: pointer; /* Cursor al pasar por encima */
+  border-radius: 5px; /* Borde redondeado */
+}
+
+.quantity-button:hover {
+  background-color: #ddd; /* Cambio de color al pasar por encima */
+}
+
+/* Estilos específicos para el botón de menos */
+#decreaseQuantity {
+  margin-right: 5px; /* Margen derecho */
+}
+
+/* Estilos específicos para el botón de más */
+#increaseQuantity {
+  margin-left: 5px; /* Margen izquierdo */
+}
+
+
+.cart-total {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.payment-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#whatsappButton {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #25D366;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#whatsappButton:hover {
+  background-color: #1ebe5a;
+}

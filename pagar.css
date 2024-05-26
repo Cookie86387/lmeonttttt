@@ -1,0 +1,281 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ff7f50;
+}
+
+.buy-button {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #ff7f50;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    padding-top: 5px;
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin: 0px;
+    padding: 10px;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav ul li .submenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    top: -10px;
+}
+
+/* Estilos del menú de navegación */
+nav ul li a:hover {
+    color: #ff7f50;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 20px;
+    left: 0px;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    visibility: visible;
+    transform: scaleX(1.1);
+}
+
+.submenu {
+    display: grid;
+    position: absolute;
+    background-color: #7a7a7a;
+    width: 100vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    grid-template-columns: repeat(4, 1fr);
+    z-index: 1;
+    padding: 10px;
+    opacity: 0;
+}
+
+/* Mostrar el submenu al pasar el mouse sobre la marca */
+.marca {
+    position: relative;
+}
+
+.marca:hover .submenu {
+    opacity: 1;
+    transform: translateY(0);
+    top: 76%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.submenu a {
+    color: #333;
+}
+
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s;
+}
+
+.submenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.submenu ul li {
+    margin: 1px 0;
+}
+
+header h1 a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* Estilos para el enlace de volver al inicio */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #e6603f;
+}
+
+.footer {
+    margin-top: 30px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-column {
+    flex: 1;
+    padding: 0 10px;
+  }
+  
+  .footer-column h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-bottom {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+  }

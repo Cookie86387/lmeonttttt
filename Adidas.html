@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1><a href="index.html">Tienda de Ropa</a></h1>
+    <nav>
+        <ul>
+            <li class="marca">
+                <a href="Vans.html" class="dropbtn">Vans</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">Authentic</a></li>
+                        <li><a href="VansOldSkool.html">Old Skool</a></li>
+                        <li><a href="#">Sk8-Hi</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="marca">
+                <a href="Nike.html" class="dropbtn">Nike</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">Air Force 1</a></li>
+                        <li><a href="#">Air Max 90</a></li>
+                        <li><a href="#">Blazer Low</a></li>
+                        <li><a href="#">Dunk Low</a></li>
+                        <li><a href="#">Air Jordan 1</a></li>
+                        <li><a href="#">React Element 55</a></li>
+                        <li><a href="#">Cortez</a></li>
+                        <li><a href="#">Roshe One</a></li>
+                        <li><a href="#">Air Max 97</a></li>
+                        <li><a href="#">VaporMax</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="marca">
+                <a href="Adidas.html" class="dropbtn">Adidas</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">Superstar</a></li>
+                        <li><a href="#">Stan Smith</a></li>
+                        <li><a href="#">NMD_R1</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="marca">
+                <a href="Converse.html" class="dropbtn">Converse</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">Chuck Taylor All Star High Top</a></li>
+                        <li><a href="#">Chuck Taylor All Star Low Top</a></li>
+                        <li><a href="#">One Star</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="marca">
+                <a href="Puma.html" class="dropbtn">Puma</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">Suede Classic</a></li>
+                        <li><a href="#">RS-X</a></li>
+                        <li><a href="#">Clyde</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="marca">
+                <a href="Reebok.html" class="dropbtn">Reebok</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">Classic Leather</a></li>
+                        <li><a href="#">Club C 85</a></li>
+                        <li><a href="#">Workout Plus</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="marca">
+                <a href="NewBalance.html" class="dropbtn">New Balance</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">New Balance 990v5</a></li>
+                        <li><a href="#">New Balance Fresh Foam 1080v11</a></li>
+                        <li><a href="#">New Balance FuelCell Rebel v2</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="carrito">
+        <a href="carrito.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icono-carrito">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l3.5 12h10l3.5-9H5"></path>
+            </svg>
+        </a>
+    </div>
+</header>
+<main>
+    <h2 class="titulo-principal">Nike</h2>
+
+    <!-- Menú de búsqueda -->
+    <div class="menu-busqueda">
+        <input type="text" id="search" placeholder="Buscar...">
+        <div class="filtros">
+            <h3>Filtros</h3>
+            <div class="filtro">
+                <h4>Talles</h4>
+                <select id="filtro-talles">
+                    <option value="">Todos</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+            <div class="filtro">
+                <h4>Colores</h4>
+                <select id="filtro-colores">
+                    <option value="">Todos</option>
+                    <option value="rojo">Rojo</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="negro">Negro</option>
+                </select>
+            </div>
+            <div class="filtro">
+                <h4>Marcas</h4>
+                <select id="filtro-marcas">
+                    <option value="">Todas</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Adidas">Adidas</option>
+                    <option value="Vans">Vans</option>
+                    <!-- Agrega más marcas según necesites -->
+                </select>
+            </div>
+        </div>
+    </div>
+
+ <!-- Productos -->
+<section id="productos" class="catalogo tres-columnas">
+  <div class="producto oculto">
+      <a href="Superstar.html">
+          <div class="imagen-container">
+              <p>Superstar</p>
+              <img src="remera.png" alt="Camiseta Roja" class="producto-imagen">
+          </div>
+      </a>
+  </div>
+  <div class="producto oculto">
+      <a href="producto1.html">
+          <div class="imagen-container">
+              <p>samba</p>
+              <img src="remera.png" alt="Camiseta Roja" class="producto-imagen">
+          </div>
+      </a>
+  </div>
+  <div class="producto oculto">
+    <a href="producto1.html">
+        <div class="imagen-container">
+            <p>Camiseta azul</p>
+            <img src="remera.png" alt="Camiseta Roja" class="producto-imagen">
+        </div>
+    </a>
+</div>
+  <div class="producto oculto">
+      <a href="producto1.html">
+          <div class="imagen-container">
+              <p>Camiseta rojo</p>
+              <img src="remera.png" alt="Camiseta Roja" class="producto-imagen">
+          </div>
+      </a>
+  </div>
+  <div class="producto oculto">
+      <a href="producto1.html">
+          <div class="imagen-container">
+              <p>Camiseta azul</p>
+              <img src="remera.png" alt="Camiseta Roja" class="producto-imagen">
+          </div>
+      </a>
+  </div>
+</section>
+<div class="mensaje">No se encontramos resultados a tu busquea</div>
+
+
+    <aside id="carrito" class="carrito-vacio">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p id="total">Total: $0</p>
+        <button onclick="vaciarCarrito()" class="boton boton-rojo">Vaciar Carrito</button>
+        <a href="https://api.whatsapp.com/send?phone=543425594220&text=Hola%2C%20quiero%20ordenar%20los%20siguientes%20productos%3A%20{Aquí%20escribe%20los%20productos%20del%20carrito}" class="boton boton-verde">Contactar por WhatsApp</a>
+    </aside>
+</main>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Sobre Nosotros</h3>
+            <p>Somos una tienda de ropa que ofrece una amplia variedad de productos de marcas reconocidas.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contacto</h3>
+            <p>Dirección: Calle Principal, Ciudad, País</p>
+            <p>Teléfono: +123456789</p>
+            <p>Email: info@tiendaderopa.com</p>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+<script src="productos.json"></script>
+<script src="search.js" type="text/javascript"></script>
+</body>
+</html>
